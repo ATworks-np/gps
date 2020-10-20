@@ -6,7 +6,7 @@ $dsn = 'database.cgbqtfdk1vhj.ap-northeast-1.rds.amazonaws.com';
 $user = 'admin';
 $password = 'kvls1093SS';
 
-$link = mysqli_connect($dsn, $userm $password, 'shop');
+$link = mysqli_connect($dsn, $userm $password, 'test_DB');
 
 // 接続状況をチェックします
 if (mysqli_connect_errno()) {
