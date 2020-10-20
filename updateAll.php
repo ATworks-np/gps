@@ -1,5 +1,5 @@
 <?php
-$POST = json_decode(file_get_contents('php://input'), true);
+$POST = get_request();
 $user_id = $POST["user_id"];
 $widget_id = $POST["widget_id"];
 
@@ -28,5 +28,18 @@ try
       print 'データーベース接続エラー発生';
       exit();
 }
+function get_request() {
+    $content_type = explode(';', trim(strtolower($_SERVER['CONTENT_TYPE'])));
+    $media_type = $content_type[0];
 
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && $media_type == 'application/json') {
+        // application/json で送信されてきた場合の処理
+        $request = json_decode(file_get_contents('php://input'), true);
+    } else {
+        // application/x-www-form-urlencoded で送信されてきた場合の処理
+        $request = $_REQUEST;
+    }
+
+    return $request;
+}
 ?>
