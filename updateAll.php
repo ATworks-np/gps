@@ -21,7 +21,7 @@ try
           )" ;
 
   $sth = $dbh->query($sql);
-  echo json_encode($st->fetchAll(PDO::FETCH_ASSOC));
+  echo json_encode($sth->fetchAll(PDO::FETCH_ASSOC));
   $userData = array();
   //echo data_json;
   // while($value = $sth->fetch(PDO::FETCH_ASSOC)){
