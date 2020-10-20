@@ -17,7 +17,7 @@ try
           WHERE date = (
             SELECT max(date)
             FROM logdata
-            WHERE widget_id = d.widget_id
+            WHERE widget_id = d.widget_id AND user_id = $user_id
           )" ;
 
   $res = $dbh->query($sql);
