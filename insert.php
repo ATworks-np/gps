@@ -5,8 +5,15 @@ $name = $_POST["name"];
 $dsn = 'database.cgbqtfdk1vhj.ap-northeast-1.rds.amazonaws.com';
 $user = 'admin';
 $password = 'kvls1093SS';
-
-$dbh=new PDO($dsn, $user, $password);
+try
+{
+  $dbh=new PDO($dsn, $user, $password);
+}
+catch (Exception $e)
+{
+      print 'データーベース接続エラー発生';
+      exit();
+}
 // INSERT文を変数に格納
 //$sql = "INSERT INTO user (id, name) VALUES (:id, :name,)";
 // 挿入する値は空のまま、SQL実行の準備をする
