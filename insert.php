@@ -6,14 +6,7 @@ $dsn = 'database.cgbqtfdk1vhj.ap-northeast-1.rds.amazonaws.com';
 $user = 'admin';
 $password = 'kvls1093SS';
 
-$link = mysqli_connect($dsn, $userm $password, 'test_DB');
-
-// 接続状況をチェックします
-if (mysqli_connect_errno()) {
-    die("データベースに接続できません:" . mysqli_connect_error() . "\n");
-} else {
-    echo "データベースの接続に成功しました。\n";
-}
+$dbh=new PDO($dsn, $user, $password);
 // INSERT文を変数に格納
 //$sql = "INSERT INTO user (id, name) VALUES (:id, :name,)";
 // 挿入する値は空のまま、SQL実行の準備をする
