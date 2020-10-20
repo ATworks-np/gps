@@ -11,15 +11,13 @@ try
 {
   $dbh=new PDO($dsn, $user, $password);
   $sql = "SELECT * FROM user";
-  echo $id;
   /*
   $res = $dbh->query($sql);
   foreach( $res as $value ) {
     echo "$value[name]<br>";
   }
   */
-  /*
-  $sql = "INSERT INTO user (id, name) VALUES (:id, :name,)";
+  $sql = "INSERT INTO user(id, name) VALUES(:id, :name)";
   $stmt = $dbh->prepare($sql);
   $params = array(':id' => $id, ':name' => $name);
   $stmt->execute($params);
@@ -28,7 +26,7 @@ try
   }else{
     print('データの追加に失敗しました<br>');
   }
-  */
+
 }
 catch (Exception $e)
 {
