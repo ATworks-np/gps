@@ -1,7 +1,7 @@
 <?php
 $id = $_POST["id"];
 $name = $_POST["name"];
-
+print($id,$name)
 $dbhost = 'database.cgbqtfdk1vhj.ap-northeast-1.rds.amazonaws.com';
 $dbname = 'test_DB';
 $dsn = 'mysql:host='.$dbhost.';dbname='.$dbname;
@@ -17,7 +17,7 @@ try
   if ($stmt){
     print('データの追加に成功しました<br>');
   }else{
-      print('データの追加に失敗しました<br>');
+    print('データの追加に失敗しました<br>');
   }
 }
 catch (Exception $e)
