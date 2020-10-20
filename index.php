@@ -1,8 +1,7 @@
 <?php
-$id = $_GET[‘id’];
-echo $id;
+$comment = $_GET[‘comment’];
+echo $comment;
 ?>
-
 <!DOCTYPE html>
 <html lang = “ja”>
 <head>
@@ -12,8 +11,8 @@ echo $id;
 <body>
 <h1>フォームデータの送信</h1>
 <form action = “index.php” method = “get”>
-<input type = “text” name =“id/“><br/>
-<input type = “submit” value =“a/“>
+<input type = “text” name =“comment/“><br/>
+<input type="submit" value="send">
 </form>
 </body>
 </html>
