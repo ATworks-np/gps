@@ -5,10 +5,14 @@ $name = $_POST["name"];
 $dsn = 'database.cgbqtfdk1vhj.ap-northeast-1.rds.amazonaws.com';
 $user = 'admin';
 $password = 'kvls1093SS';
-$mysqli = new mysqli($dsn, $userm $password, "test_DB");
 
-if( $mysqli->connect_errno ) {
-	echo $mysqli->connect_errno . ' : ' . $mysqli->connect_error;
+$link = mysqli_connect($dsn, $userm $password, 'shop');
+
+// 接続状況をチェックします
+if (mysqli_connect_errno()) {
+    die("データベースに接続できません:" . mysqli_connect_error() . "\n");
+} else {
+    echo "データベースの接続に成功しました。\n";
 }
 // INSERT文を変数に格納
 //$sql = "INSERT INTO user (id, name) VALUES (:id, :name,)";
