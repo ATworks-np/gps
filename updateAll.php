@@ -33,7 +33,7 @@ try
     //  'widget_id'=>$value['widget_id'],
     //  'lat'=>$value['lat'],
     //  'lng'=?$value['lng'],
-    );
+    //);
   }
 
   //header('Content-type: application/json');
