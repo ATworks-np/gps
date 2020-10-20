@@ -18,6 +18,10 @@ try
     echo "$value[lat]<br>";
   }
 
+}catch (Exception $e)
+{
+      print 'データーベース接続エラー発生';
+      exit();
 }
 
 ?>
