@@ -24,18 +24,18 @@ try
   $sth->execute();
   $userData = array();
   //echo data_json;
-  while($value = $sth->fetch(PDO::FETCH_ASSOC)){
-    //echo $value[id].'|'.$value[date].'|'.$value[user_id].'|'.$value[widget_id].'|'.$value[lat].'|'.$value[lng];
-    //echo '<br>';
-    $userData[]=array(
-      'id'=>$value['id'],
-      'date'=>$value['date'],
-      'user_id'=>$value['user_id'],
-      'widget_id'=>$value['widget_id'],
-      'lat'=>$value['lat'],
-      'lng'=?$value['lng'],
-    );
-  }
+  // while($value = $sth->fetch(PDO::FETCH_ASSOC)){
+  //   //echo $value[id].'|'.$value[date].'|'.$value[user_id].'|'.$value[widget_id].'|'.$value[lat].'|'.$value[lng];
+  //   //echo '<br>';
+  //   $userData[]=array(
+  //     'id'=>$value['id'],
+  //     'date'=>$value['date'],
+  //     'user_id'=>$value['user_id'],
+  //     'widget_id'=>$value['widget_id'],
+  //     'lat'=>$value['lat'],
+  //     'lng'=?$value['lng'],
+  //   );
+  // }
 
 
 
