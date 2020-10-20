@@ -10,12 +10,13 @@ $password = 'kvls1093SS';
 try
 {
   $dbh=new PDO($dsn, $user, $password);
-  $sql = "SELECT * FROM logdata as d WHERE date=(select max(date) from logdata where user_id = d.user_id)" ;
+  $sql = "SELECT * FROM logdata";
+  //$sql = "SELECT * FROM logdata as d WHERE date=(select max(date) from logdata where user_id = d.user_id)" ;
 
   $res = $dbh->query($sql);
 
   foreach( $res as $value ) {
-    echo "$value[lat][1]<br>";
+    echo "$value[lat]<br>";
   }
 
 }catch (Exception $e)
