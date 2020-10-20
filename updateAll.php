@@ -21,6 +21,8 @@ try
           )" ;
 
   $res = $dbh->query($sql);
+
+  header('Content-type: application/json');
   $data_json = json_encode($res)
   //echo data_json;
   foreach( $res as $value ) {
