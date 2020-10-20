@@ -26,13 +26,13 @@ try
   foreach( $res as $value ) {
     echo $value[id].'|'.$value[date].'|'.$value[user_id].'|'.$value[widget_id].'|'.$value[lat].'|'.$value[lng];
     echo '<br>';
-    $userData[]=array(
-      'id'=>$value['id'],
-      'date'=>$value['date'],
-      'user_id'=>$value['user_id'],
-      'widget_id'=>$value['widget_id'],
-      'lat'=>$value['lat'],
-      'lng'=?$value['lng'],
+    //$userData[]=array(
+    //  'id'=>$value['id'],
+    //  'date'=>$value['date'],
+    //  'user_id'=>$value['user_id'],
+    //  'widget_id'=>$value['widget_id'],
+    //  'lat'=>$value['lat'],
+    //  'lng'=?$value['lng'],
     );
   }
 
