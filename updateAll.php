@@ -12,13 +12,13 @@ $password = 'kvls1093SS';
 try
 {
   $dbh=new PDO($dsn, $user, $password);
-  $sql = "SELECT * FROM logdata WHERE user_id = $user_id";
-  // $sql = "SELECT * FROM logdata as d
-  //         WHERE date = (
-  //           SELECT max(date)
-  //           FROM logdata
-  //           WHERE widjet_id = d.widjet_id
-  //         )" ;
+  //$sql = "SELECT * FROM logdata WHERE user_id = $user_id";
+  $sql = "SELECT * FROM logdata as d
+          WHERE date = (
+            SELECT max(date)
+            FROM logdata
+            WHERE widget_id = d.widget_id
+          )" ;
 
   $res = $dbh->query($sql);
 
