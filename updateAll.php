@@ -24,23 +24,23 @@ try
   $userData = array();
   //echo data_json;
   foreach( $res as $value ) {
-    echo $value[id].'|'.$value[date].'|'.$value[user_id].'|'.$value[widget_id].'|'.$value[lat].'|'.$value[lng];
-    echo '<br>';
-    //$userData[]=array(
-    //  'id'=>$value['id'],
-    //  'date'=>$value['date'],
-    //  'user_id'=>$value['user_id'],
-    //  'widget_id'=>$value['widget_id'],
-    //  'lat'=>$value['lat'],
-    //  'lng'=?$value['lng'],
-    //);
+    //echo $value[id].'|'.$value[date].'|'.$value[user_id].'|'.$value[widget_id].'|'.$value[lat].'|'.$value[lng];
+    //echo '<br>';
+    $userData[]=array(
+      'id'=>$value['id'],
+      'date'=>$value['date'],
+      'user_id'=>$value['user_id'],
+      'widget_id'=>$value['widget_id'],
+      'lat'=>$value['lat'],
+      'lng'=?$value['lng'],
+    );
   }
 
 
 
-  //header('Content-type: application/json');
-  //$data_json = json_encode($res)
-
+  header('Content-type: application/json');
+  $data_json = json_encode($res)
+  echo $data_json;
 }catch (Exception $e)
 {
       print 'データーベース接続エラー発生';
