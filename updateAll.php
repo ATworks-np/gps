@@ -23,7 +23,7 @@ try
   $res = $dbh->prepare($sql);
   $userData = array();
   //echo data_json;
-  foreach( $res as $value ) {
+  while($value = $res->fetch(PDO::FETCH_ASSOC)){
     //echo $value[id].'|'.$value[date].'|'.$value[user_id].'|'.$value[widget_id].'|'.$value[lat].'|'.$value[lng];
     //echo '<br>';
     $userData[]=array(
