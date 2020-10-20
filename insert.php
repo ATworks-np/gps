@@ -11,7 +11,7 @@ if( $mysqli->connect_errno ) {
 	echo $mysqli->connect_errno . ' : ' . $mysqli->connect_error;
 }
 // INSERT文を変数に格納
-$sql = "INSERT INTO user (id, name) VALUES (:id, :name,)";
+//$sql = "INSERT INTO user (id, name) VALUES (:id, :name,)";
 // 挿入する値は空のまま、SQL実行の準備をする
 //$stmt = $dbh->prepare($sql);
 // 挿入する値を配列に格納する
