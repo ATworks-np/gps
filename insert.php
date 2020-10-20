@@ -17,6 +17,6 @@ $stmt = $dbh->prepare($sql);
 // 挿入する値を配列に格納する
 $params = array(':id' => id, ':name' => name);
 // 挿入する値が入った変数をexecuteにセットしてSQLを実行
-$stmt->execute($params);
-
+//$stmt->execute($params);
+//$mysqli->close();
 ?>
