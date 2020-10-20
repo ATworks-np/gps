@@ -22,11 +22,11 @@ try
 
   $res = $dbh->query($sql);
   $data_json = json_encode($res)
-  echo data_json;
-  //foreach( $res as $value ) {
-  //  echo $value[id].'|'.$value[date].'|'.$value[user_id].'|'.$value[widget_id].'|'.$value[lat].'|'.$value[lng];
-  //   echo '<br>';
-  //}
+  //echo data_json;
+  foreach( $res as $value ) {
+    echo $value[id].'|'.$value[date].'|'.$value[user_id].'|'.$value[widget_id].'|'.$value[lat].'|'.$value[lng];
+     echo '<br>';
+  }
 
 }catch (Exception $e)
 {
