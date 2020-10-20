@@ -12,7 +12,7 @@ $password = 'kvls1093SS';
 try
 {
   $dbh=new PDO($dsn, $user, $password);
-  $sql = "SELECT * FROM logdata WHERE user_id = $user_id";
+  $sql = "SELECT * FROM logdata WHERE user_id = 1";
   //$sql = "SELECT * FROM logdata as d WHERE date=(select max(date) from logdata where widjet_id = d.widjet_id)" ;
 
   $res = $dbh->query($sql);
