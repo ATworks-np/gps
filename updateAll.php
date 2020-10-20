@@ -20,10 +20,11 @@ try
             WHERE widget_id = d.widget_id AND user_id = $user_id
           )" ;
 
-  $res = $dbh->prepare($sql);
+  $sth = $dbh->prepare($sql);
+  $sth->execute();
   $userData = array();
   //echo data_json;
-  while($value = $res->fetch(PDO::FETCH_ASSOC)){
+  while($value = $sth->fetch(PDO::FETCH_ASSOC)){
     //echo $value[id].'|'.$value[date].'|'.$value[user_id].'|'.$value[widget_id].'|'.$value[lat].'|'.$value[lng];
     //echo '<br>';
     $userData[]=array(
