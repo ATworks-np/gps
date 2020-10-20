@@ -11,15 +11,13 @@ try
 {
   $dbh=new PDO($dsn, $user, $password);
   $sql = "SELECT * FROM user";
-
-  // SQL実行
+  echo '$id';
+  /*
   $res = $dbh->query($sql);
-
-  // 取得したデータを出力
   foreach( $res as $value ) {
     echo "$value[name]<br>";
   }
-
+  */
   /*
   $sql = "INSERT INTO user (id, name) VALUES (:id, :name,)";
   $stmt = $dbh->prepare($sql);
