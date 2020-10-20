@@ -20,22 +20,22 @@ try
             WHERE widget_id = d.widget_id AND user_id = $user_id
           )" ;
 
-  $sth = $dbh->prepare($sql);
-  $sth->execute();
+  $sth = $dbh->query($sql);
+  echo json_encode($st->fetchAll(PDO::FETCH_ASSOC));
   $userData = array();
   //echo data_json;
-  while($value = $sth->fetch(PDO::FETCH_ASSOC)){
-    echo $value[id].'|'.$value[date].'|'.$value[user_id].'|'.$value[widget_id].'|'.$value[lat].'|'.$value[lng];
-    // echo '<br>';
-    // $userData[]=array(
-    //   'id'=>$value['id'],
-    //   'date'=>$value['date'],
-    //   'user_id'=>$value['user_id'],
-    //   'widget_id'=>$value['widget_id'],
-    //   'lat'=>$value['lat'],
-    //   'lng'=?$value['lng'],
-    // );
-  }
+  // while($value = $sth->fetch(PDO::FETCH_ASSOC)){
+  //   echo $value[id].'|'.$value[date].'|'.$value[user_id].'|'.$value[widget_id].'|'.$value[lat].'|'.$value[lng];
+  //   echo '<br>';
+  //   $userData[]=array(
+  //     'id'=>$value['id'],
+  //     'date'=>$value['date'],
+  //     'user_id'=>$value['user_id'],
+  //     'widget_id'=>$value['widget_id'],
+  //     'lat'=>$value['lat'],
+  //     'lng'=?$value['lng'],
+  //   );
+  // }
 
 
 
