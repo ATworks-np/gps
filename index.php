@@ -10,7 +10,7 @@ echo $comment;
 </head>
 <body>
 <h1>フォームデータの送信</h1>
-<form action = “index.php” method = “get”>
+<form action = index.php method = “get”>
 <input type = “text” name =“comment/“><br/>
 <input type="submit" value="send">
 </form>
