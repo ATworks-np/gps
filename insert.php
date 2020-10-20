@@ -1,6 +1,12 @@
 <?php
 $body = file_get_contents('php://input');
 $json = json_decode($body, true);
+if (is_null($json)) {
+        # error JSONをデコードできない
+        http_response_code(500);        //HTTPレスポンスコード(500サーバーエラー)
+        echo "JSON error";
+        exit();
+    }
 
 $id = $json["id"];
 $name = $json["name"];
