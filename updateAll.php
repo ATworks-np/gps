@@ -39,8 +39,8 @@ try
 
 
 
-  header('Content-type: application/json');
-  $data_json = json_encode($res)
+  //header('Content-type: application/json');
+  //$data_json = json_encode($res)
   //echo $data_json;
 }catch (Exception $e)
 {
