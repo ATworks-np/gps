@@ -40,7 +40,7 @@ try
 
   header('Content-type: application/json');
   $data_json = json_encode($res)
-  echo $data_json;
+  //echo $data_json;
 }catch (Exception $e)
 {
       print 'データーベース接続エラー発生';
