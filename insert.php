@@ -1,15 +1,7 @@
 <?php
-$body = file_get_contents('php://input');
-$json = json_decode($body, true);
-if (is_null($json)) {
-        # error JSONをデコードできない
-        http_response_code(500);        //HTTPレスポンスコード(500サーバーエラー)
-        echo "JSON error";
-        exit();
-    }
-
-$id = $json["id"];
-$name = $json["name"];
+$POST = get_request();
+$id = $POST["id"];
+$name = $POST["name"];
 
 $dbhost = 'database.cgbqtfdk1vhj.ap-northeast-1.rds.amazonaws.com';
 $dbname = 'test_DB';
@@ -51,4 +43,19 @@ catch (Exception $e)
 // 挿入する値が入った変数をexecuteにセットしてSQLを実行
 //$stmt->execute($params);
 //$mysqli->close();
+
+function get_request() {
+    $content_type = explode(';', trim(strtolower($_SERVER['CONTENT_TYPE'])));
+    $media_type = $content_type[0];
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && $media_type == 'application/json') {
+        // application/json で送信されてきた場合の処理
+        $request = json_decode(file_get_contents('php://input'), true);
+    } else {
+        // application/x-www-form-urlencoded で送信されてきた場合の処理
+        $request = $_REQUEST;
+    }
+
+    return $request;
+}
 ?>
