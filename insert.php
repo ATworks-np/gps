@@ -10,6 +10,15 @@ $password = 'kvls1093SS';
 try
 {
   $dbh=new PDO($dsn, $user, $password);
+  $sql = "INSERT INTO user (id, name) VALUES (:id, :name,)";
+  $stmt = $dbh->prepare($sql);
+  $params = array(':id' => $id, ':name' => $name);
+  $stmt->execute($params);
+  if ($stmt){
+    print('データの追加に成功しました<br>');
+  }else{
+      print('データの追加に失敗しました<br>');
+  }
 }
 catch (Exception $e)
 {
