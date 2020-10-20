@@ -1,6 +1,9 @@
 <?php
-$id = $_POST["id"];
-$name = $_POST["name"];
+$body = file_get_contents('php://input');
+$json = json_decode($body, true);
+
+$id = $json["id"];
+$name = $json["name"];
 
 $dbhost = 'database.cgbqtfdk1vhj.ap-northeast-1.rds.amazonaws.com';
 $dbname = 'test_DB';
