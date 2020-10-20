@@ -20,7 +20,7 @@ try
             WHERE widget_id = d.widget_id AND user_id = $user_id
           )" ;
 
-  $res = $dbh->query($sql);
+  $res = $dbh->prepare($sql);
   $userData = array();
   //echo data_json;
   foreach( $res as $value ) {
@@ -35,6 +35,8 @@ try
     //  'lng'=?$value['lng'],
     //);
   }
+
+
 
   //header('Content-type: application/json');
   //$data_json = json_encode($res)
