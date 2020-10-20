@@ -18,7 +18,7 @@ try
   $res = $dbh->query($sql);
 
   foreach( $res as $value ) {
-    echo $value[id].'|'.$value[date].'|'.$value[user_id].'|'.$value[widjet_id].'|'.$value[lat].'|'.$value[lng];
+    echo $value[id].'|'.$value[date].'|'.$value[user_id].'|'.$value[widget_id].'|'.$value[lat].'|'.$value[lng];
      echo '<br>';
   }
 
