@@ -11,7 +11,7 @@ try
 {
   $dbh=new PDO($dsn, $user, $password);
   $sql = "SELECT * FROM user";
-  echo '$id';
+  echo $id;
   /*
   $res = $dbh->query($sql);
   foreach( $res as $value ) {
