@@ -1,3 +1,4 @@
-<?php 
-phpinfo();
+<?php
+$id = $_GET[‘id’];
+echo $id;
 ?>
