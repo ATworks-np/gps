@@ -15,7 +15,7 @@ try
   $res = $dbh->query($sql);
 
   foreach( $res as $value ) {
-    echo "$value<br>";
+    echo "$value[lat][1]<br>";
   }
 
 }catch (Exception $e)
