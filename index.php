@@ -13,7 +13,7 @@ echo $id;
 <h1>フォームデータの送信</h1>
 <form action = “index.php” method = “get”>
 <input type = “text” name =“id/“><br/>
-<input type = “submit” value =“送信/“>
+<input type = “submit” value =“a/“>
 </form>
 </body>
 </html>
